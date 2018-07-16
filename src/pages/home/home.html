@@ -7,8 +7,10 @@
 </ion-header>
 
 <ion-content padding>
-    <button ion-button full color="secondary">Scan code barre</button>
-    <button ion-button (click)="scan()">Scan ... </button>
+   
+    <button ion-button full color="secondary" (click)="scan()">Scan code barre</button>
+    <ion-input type="text" [(ngModel)]="encodeData" ></ion-input>   
+    <button ion-button (click)="encodeText()">Encode Text</button>
     <div *ngIf="scanData">
         <p>Scanned Text : </p>
         <p>Scanned Format : </p>
